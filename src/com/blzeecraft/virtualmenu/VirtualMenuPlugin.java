@@ -24,7 +24,7 @@ import lombok.Getter;
 public class VirtualMenuPlugin extends JavaPlugin implements ILog {
 	@Getter
 	protected static VirtualMenuPlugin instance;
-	
+
 	protected MenuManager menuManager;
 	protected PacketManager packetManager;
 	protected CommandManager commandManager;
@@ -36,7 +36,7 @@ public class VirtualMenuPlugin extends JavaPlugin implements ILog {
 	protected MenuBuilder menuBuilder;
 	protected UpdateChecker updateChecker;
 	protected Metrics metrics;
-	
+
 	@Override
 	public void onEnable() {
 		instance = this;
@@ -68,9 +68,9 @@ public class VirtualMenuPlugin extends JavaPlugin implements ILog {
 		commandManager = CommandManager.init(this);
 		commandManager.registerCommands();
 		commandManager.registerHandlers();
-		updateChecker = new UpdateChecker(this);
-		updateChecker.startTask();
-		updateChecker.register();
+		// updateChecker = new UpdateChecker(this);
+		// updateChecker.startTask();
+		// updateChecker.register();
 		metrics = new Metrics(this);
 		if (metrics.isEnabled()) {
 			this.getLogger().info("使用bstats统计插件使用情况");
@@ -78,22 +78,22 @@ public class VirtualMenuPlugin extends JavaPlugin implements ILog {
 			this.getLogger().info("为支持作者,请不要关闭bstats统计");
 		}
 	}
-	
+
 	@Override
 	public void onDisable() {
 		menuBuilder.closeAll();
 		packetManager.unregisterHandler();
 		pluginLogger.unregister();
-		
+
 	}
-	
-	
+
+
 
 	@Override
 	public String getLogPrefix() {
 		return "#root";
 	}
-	
+
 	public void runOnPrimaryThread(Runnable task) {
 		if (Bukkit.isPrimaryThread()) {
 			task.run();
