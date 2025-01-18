@@ -23,6 +23,8 @@ public class Settings implements IConfig {
 	protected int antiSpam;
 	@Node(key = "SupportNBT", type = DataType.BOOLEAN)
 	protected boolean supportNBT;
+	@Node(key = "CheckVersion", type = DataType.BOOLEAN)
+	protected boolean checkVersion;
 	@Node(key = "Lang.NoEnoughMoney", type = DataType.STRING)
 	protected String lang_noEnoughMoney;
 	@Node(key = "Lang.NoEnoughPoint", type = DataType.STRING)
@@ -35,24 +37,24 @@ public class Settings implements IConfig {
 	protected String lang_noPermission;
 	@Node(key = "Lang.InternalError", type = DataType.STRING)
 	protected String lang_internalError;
-	
+
 	@Getter
 	protected static Settings instance;
-	
+
 	public static Settings init(VirtualMenuPlugin pl) {
 		return instance = new Settings(pl);
 	}
-	
+
 	public static void sendMessage(CommandSender sender, String message) {
 		sender.sendMessage(new StringBuilder(instance.prefix).append(" ").append(message).toString());
 	}
-	
+
 	private VirtualMenuPlugin pl;
-	
+
 	public Settings(VirtualMenuPlugin pl) {
 		this.pl = pl;
 	}
-	
+
 	public void readSetting() {
 		File file = pl.getFileManager().configFile;
 		YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
@@ -68,7 +70,7 @@ public class Settings implements IConfig {
 	public void apply() {
 		prefix = ChatColor.translateAlternateColorCodes('&', prefix);
 	}
-	
-	
+
+
 
 }

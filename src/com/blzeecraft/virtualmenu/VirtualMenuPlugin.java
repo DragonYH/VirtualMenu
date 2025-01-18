@@ -68,9 +68,11 @@ public class VirtualMenuPlugin extends JavaPlugin implements ILog {
 		commandManager = CommandManager.init(this);
 		commandManager.registerCommands();
 		commandManager.registerHandlers();
-		// updateChecker = new UpdateChecker(this);
-		// updateChecker.startTask();
-		// updateChecker.register();
+		if (settings.isCheckVersion()) {
+			updateChecker = new UpdateChecker(this);
+			updateChecker.startTask();
+			updateChecker.register();
+		}
 		metrics = new Metrics(this);
 		if (metrics.isEnabled()) {
 			this.getLogger().info("使用bstats统计插件使用情况");

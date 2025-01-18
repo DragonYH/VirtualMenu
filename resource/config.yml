@@ -4,6 +4,8 @@ Prefix: '&b[&dVirtualMenu&b]'
 AntiSpam: 200
 # 是否启用NBT支持，非原版服务端可能出现异常
 SupportNBT: true
+# 是否启用版本检查
+CheckVersion: true
 # 全局语言，菜单设置的语言会覆盖全局设定
 Lang:
   NoEnoughMoney: '金钱不足,你需要 %.2f 来执行这个动作'
@@ -12,4 +14,4 @@ Lang:
   NoEnoughtLevel: '经验不足,你需要到达 %d 级执行这个动作'
   NoPermission: '权限不足,你需要 %s 来执行这个命令'
   InternalError: '插件出现内部错误，动作被取消，请联系管理员，错误摘要: %s'
-  
+
