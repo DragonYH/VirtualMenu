@@ -46,23 +46,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
-        <!-- <repository>
+        <repository>
             <id>minecraft</id>
             <url>https://repo.headway.link/repository/minecraft/</url>
-        </repository> -->
-        <repository>
-	        <id>vault-repo</id>
-	        <url>http://nexus.hc.to/content/repositories/pub_releases/</url>
         </repository>
-        <repository>
-            <id>papermc</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-
     </repositories>
     <dependencies>
         <dependency>
@@ -76,6 +63,12 @@
             <artifactId>paper-api</artifactId>
             <version>1.21-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+            <repositories>
+                <repository>
+                    <id>papermc</id>
+                    <url>https://repo.papermc.io/repository/maven-public/</url>
+                </repository>
+            </repositories>
         </dependency>
         <dependency>
             <groupId>net.md-5</groupId>
@@ -83,12 +76,24 @@
             <version>1.13-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
+            <repositories>
+                <repository>
+                    <id>sonatype</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </repository>
+            </repositories>
         </dependency>
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7</version>
             <scope>provided</scope>
+            <repositories>
+                <repository>
+                    <id>azisaba</id>
+                    <url>https://repo.azisaba.net/repository/maven-public/</url>
+                </repository>
+            </repositories>
         </dependency>
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
