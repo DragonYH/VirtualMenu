@@ -66,6 +66,14 @@
             <id>glaremasters</id>
             <url>https://repo.glaremasters.me/repository/public/</url>
         </repository>
+        <repository>
+            <id>minebench</id>
+            <url>https://repo.minebench.de/</url>
+        </repository>
+        <repository>
+            <id>dakanilabs</id>
+            <url>https://repo.dakanilabs.com/repository/maven-releases/</url>
+        </repository>
     </repositories>
     <dependencies>
         <dependency>
