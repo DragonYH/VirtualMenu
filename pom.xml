@@ -46,10 +46,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
-        <repository>
+        <!-- <repository>
             <id>minecraft</id>
             <url>https://repo.headway.link/repository/minecraft/</url>
-        </repository>
+        </repository> -->
         <repository>
 	        <id>vault-repo</id>
 	        <url>http://nexus.hc.to/content/repositories/pub_releases/</url>
