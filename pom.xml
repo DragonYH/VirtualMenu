@@ -63,7 +63,7 @@
             <url>https://repo.azisaba.net/repository/maven-public/</url>
         </repository>
         <repository>
-            <id>azisaba</id>
+            <id>glaremasters</id>
             <url>https://repo.glaremasters.me/repository/public/</url>
         </repository>
     </repositories>
