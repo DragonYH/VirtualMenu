@@ -74,6 +74,10 @@
             <id>dakanilabs</id>
             <url>https://repo.dakanilabs.com/repository/maven-releases/</url>
         </repository>
+        <repository>
+            <id>dakanilabs</id>
+            <url>https://repo.bstats.org/content/repositories/releases/</url>
+        </repository>
     </repositories>
     <dependencies>
         <dependency>
